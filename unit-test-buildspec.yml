@@ -1,4 +1,5 @@
 version: 0.2
+
 phases:
   install:
     runtime-versions:
@@ -10,8 +11,4 @@ phases:
       - npm install
   build:
     commands:
-      - ng build --prod
-artifacts:
-  base-directory: dist/my-angular-project
-  files:
-    - '**/*'
+      - ng test --no-watch --no-progress --browsers=ChromeHeadlessCI
